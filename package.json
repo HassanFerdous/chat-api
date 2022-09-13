@@ -4,8 +4,8 @@
     "version": "1.0.0",
     "main": "server.js",
     "scripts": {
-        "watch": "json-server --watch db_todos.json --no-cors true --port 9000",
-        "start": "nodemon server.js"
+        "watch": "nodemon server.js",
+        "start": "node server.js"
     },
     "keywords": [],
     "author": "Learn with Sumit",
