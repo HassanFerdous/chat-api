@@ -2,10 +2,8 @@ const auth = require('json-server-auth');
 const jsonServer = require('json-server');
 const express = require('express');
 const http = require('http');
-var cors = require('cors');
 
 const app = express();
-app.use(cors());
 const server = http.createServer(app);
 const io = require('socket.io')(server);
 
@@ -22,6 +20,13 @@ router.render = (req, res) => {
 		// emit socket event
 		io.emit('conversation', {
 			data: res.locals.data,
+			type: method === 'POST' ? 'add' : 'update',
+		});
+	}
+
+	if (path.includes('/messages') && method === 'POST') {
+		io.emit('message', {
+			message: res.locals.data,
 		});
 	}
 
