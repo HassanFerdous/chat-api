@@ -90,6 +90,13 @@
       "name": "test8",
       "id": 15
     }
+    ,
+    {
+      "email": "test9@gmail.com",
+      "password": "$2a$10$msgBYQ4pvgoErW.mq3Py3.Y9nN8XfTaS75Qn3BA61eL.4575Rqfxy",
+      "name": "test9",
+      "id": 16
+    }
   ],
   "conversations": [
     {
